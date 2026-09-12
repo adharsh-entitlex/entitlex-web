@@ -71,52 +71,130 @@ a{
   margin:auto
 }
 
-/* ================================
+
+/* =========================================
    HEADER
-   ================================ */
+   ========================================= */
 
 header{
   position:sticky;
   top:0;
   z-index:20;
+
   background:rgba(5,9,20,.82);
+
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line)
+
+  border-bottom:1px solid var(--line);
 }
 
 .header-inner{
   width:min(1120px,calc(100% - 40px));
-  min-height:100px;
+
+  min-height:82px;
+
   margin:auto;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:24px
+
+  gap:24px;
 }
 
-/* ================================
-   LOGO
-   ================================ */
+
+/* =========================================
+   FLOATING LOGO BADGE
+   ========================================= */
 
 .brand{
-  display:inline-flex;
+  position:relative;
+
+  display:flex;
   align-items:center;
+  justify-content:center;
+
+  width:290px;
+  height:100px;
+
+  padding:12px 28px;
+
   text-decoration:none;
-  flex-shrink:0
+
+  /* Floating glass panel */
+  background:
+    linear-gradient(
+      145deg,
+      rgba(11,27,55,.96),
+      rgba(4,13,30,.96)
+    );
+
+  border:1px solid rgba(53,194,245,.65);
+
+  border-radius:22px;
+
+  /* Makes the badge pop out from the header */
+  transform:translateY(13px);
+
+  z-index:30;
+
+  /* Blue glow */
+  box-shadow:
+    0 0 0 1px rgba(53,194,245,.08),
+    0 0 22px rgba(53,194,245,.18),
+    0 15px 35px rgba(0,0,0,.45),
+    0 20px 55px rgba(29,78,216,.16);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
 }
+
+.brand:hover{
+  transform:translateY(10px);
+
+  border-color:rgba(53,194,245,.9);
+
+  box-shadow:
+    0 0 0 1px rgba(53,194,245,.12),
+    0 0 30px rgba(53,194,245,.25),
+    0 18px 40px rgba(0,0,0,.5),
+    0 25px 65px rgba(29,78,216,.22);
+}
+
+
+/*
+   Your NEW transparent logo goes here.
+
+   Recommended:
+   - Transparent PNG
+   - White EntitleX text
+   - Blue EntitleX icon
+*/
 
 .brand img{
   display:block;
+
   width:auto;
-  height:96px;
-  max-width:380px;
-  object-fit:contain
+
+  /*
+     Large logo inside the floating badge
+  */
+  height:76px;
+
+  max-width:240px;
+
+  object-fit:contain;
+
+  flex-shrink:0;
 }
 
-/* ================================
+
+/* =========================================
    NAVIGATION
-   ================================ */
+   ========================================= */
 
 .main-nav{
   display:flex;
@@ -126,9 +204,13 @@ header{
 
 .main-nav a{
   padding:10px 14px;
+
   text-decoration:none;
+
   color:var(--text);
+
   font-weight:500;
+
   border-radius:8px
 }
 
@@ -139,40 +221,58 @@ header{
 
 .nav-cta,
 .btn-primary{
-  background:linear-gradient(
-    135deg,
-    var(--blue),
-    var(--blue2)
-  );
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue2)
+    );
+
   color:#fff!important;
-  box-shadow:0 10px 30px rgba(29,78,216,.22)
+
+  box-shadow:
+    0 10px 30px rgba(29,78,216,.22)
 }
 
-/* ================================
+
+/* =========================================
    HERO
-   ================================ */
+   ========================================= */
 
 .hero{
-  min-height:calc(100vh - 100px);
+  min-height:calc(100vh - 82px);
+
   display:flex;
   align-items:center;
+
   padding:72px 0
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+
+  grid-template-columns:
+    minmax(0,1.05fr)
+    minmax(320px,.95fr);
+
   align-items:center;
+
   gap:60px
 }
 
 .eyebrow-line{
   display:inline-block;
+
   margin-bottom:20px;
+
   color:var(--blue);
+
   font-size:14px;
+
   font-weight:600;
+
   letter-spacing:.08em;
+
   text-transform:uppercase
 }
 
@@ -184,37 +284,52 @@ h3{
 
 h1{
   font-size:clamp(44px,6vw,76px);
+
   line-height:1.02;
+
   letter-spacing:-.045em;
+
   margin:0 0 24px
 }
 
 .lede{
   max-width:680px;
+
   color:var(--muted);
+
   font-size:19px;
+
   line-height:1.7;
+
   margin:0
 }
 
 .hero-actions{
   display:flex;
+
   flex-wrap:wrap;
+
   gap:12px;
+
   margin-top:32px
 }
 
 .btn-primary,
 .btn-secondary{
   display:inline-block;
+
   padding:13px 20px;
+
   border-radius:9px;
+
   text-decoration:none;
+
   font-weight:600
 }
 
 .btn-secondary{
   border:1px solid var(--line);
+
   background:rgba(255,255,255,.045)
 }
 
@@ -222,22 +337,28 @@ h1{
   background:rgba(255,255,255,.09)
 }
 
-/* ================================
+
+/* =========================================
    HERO GRAPHIC
-   ================================ */
+   ========================================= */
 
 .hero-mark{
   display:flex;
+
   justify-content:center;
   align-items:center
 }
 
 .ribbon{
   width:min(100%,430px);
+
   height:auto;
-  filter:drop-shadow(
-    0 25px 45px rgba(29,78,216,.25)
-  );
+
+  filter:
+    drop-shadow(
+      0 25px 45px rgba(29,78,216,.25)
+    );
+
   animation:float 6s ease-in-out infinite
 }
 
@@ -247,47 +368,62 @@ h1{
   }
 }
 
-/* ================================
+
+/* =========================================
    INNER PAGES
-   ================================ */
+   ========================================= */
 
 .page{
   padding:76px 0 100px;
-  min-height:calc(100vh - 100px)
+
+  min-height:calc(100vh - 82px)
 }
 
 .content-block{
   width:min(900px,calc(100% - 40px));
+
   margin:auto;
+
   background:var(--panel);
+
   border:1px solid var(--line);
+
   padding:48px;
+
   border-radius:18px;
-  box-shadow:0 25px 70px rgba(0,0,0,.2)
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.2)
 }
 
 .content-block h2{
   font-size:clamp(32px,4vw,52px);
+
   margin:0 0 22px
 }
 
 .content-block p{
   color:var(--muted);
+
   font-size:17px;
+
   line-height:1.75
 }
 
-/* ================================
+
+/* =========================================
    SERVICES
-   ================================ */
+   ========================================= */
 
 .feature{
   padding:22px 0;
+
   border-top:1px solid var(--line)
 }
 
 .feature h3{
   margin:0 0 8px;
+
   font-size:22px
 }
 
@@ -295,37 +431,52 @@ h1{
   margin:0
 }
 
-/* ================================
+
+/* =========================================
    PROCESS
-   ================================ */
+   ========================================= */
 
 .process-track{
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:18px;
+
   margin-top:32px
 }
 
 .process-step{
   position:relative;
+
   padding:24px;
+
   border:1px solid var(--line);
+
   border-radius:14px;
+
   background:rgba(0,0,0,.12)
 }
 
 .dot{
   width:38px;
   height:38px;
+
   display:grid;
+
   place-items:center;
+
   border-radius:50%;
-  background:linear-gradient(
-    135deg,
-    var(--blue),
-    var(--blue2)
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue2)
+    );
+
   font-weight:700;
+
   margin-bottom:20px
 }
 
@@ -335,28 +486,39 @@ h1{
 
 .process-step p{
   font-size:15px!important;
+
   margin:0
 }
 
-/* ================================
+
+/* =========================================
    CONTACT FORM
-   ================================ */
+   ========================================= */
 
 .contact-form{
   display:grid;
+
   gap:14px;
+
   margin-top:28px
 }
 
 .contact-form input,
 .contact-form textarea{
   width:100%;
+
   border:1px solid var(--line);
+
   border-radius:9px;
+
   background:rgba(0,0,0,.2);
+
   color:var(--text);
+
   padding:14px 15px;
+
   font:inherit;
+
   outline:none
 }
 
@@ -367,63 +529,130 @@ h1{
 
 .contact-form textarea{
   min-height:150px;
+
   resize:vertical
 }
 
 .contact-form button{
   border:0;
+
   border-radius:9px;
+
   padding:14px 20px;
-  background:linear-gradient(
-    135deg,
-    var(--blue),
-    var(--blue2)
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue2)
+    );
+
   color:white;
+
   font:600 16px 'IBM Plex Sans';
+
   cursor:pointer
 }
 
-/* ================================
+
+/* =========================================
    FOOTER
-   ================================ */
+   ========================================= */
 
 footer{
   border-top:1px solid var(--line);
+
   background:rgba(3,6,14,.72)
 }
 
 .footer-inner{
   min-height:110px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:20px
+}
+
+.footer-inner .brand{
+  /*
+     Footer logo does NOT need
+     the large floating badge.
+  */
+
+  width:auto;
+  height:auto;
+
+  padding:0;
+
+  background:none;
+
+  border:0;
+
+  border-radius:0;
+
+  transform:none;
+
+  box-shadow:none;
+}
+
+.footer-inner .brand:hover{
+  transform:none;
+
+  border:0;
+
+  box-shadow:none;
 }
 
 .footer-inner .brand img{
   height:42px;
+
   max-width:190px
 }
 
 .fine{
   color:#71819b;
+
   font-size:13px
 }
 
-/* ================================
+
+/* =========================================
    TABLET
-   ================================ */
+   ========================================= */
 
 @media(max-width:800px){
 
   .header-inner{
-    min-height:82px
+    min-height:70px
+  }
+
+  /*
+     Smaller floating badge for tablets
+  */
+
+  .brand{
+    width:235px;
+    height:82px;
+
+    padding:10px 20px;
+
+    border-radius:18px;
+
+    transform:translateY(10px)
+  }
+
+  .brand:hover{
+    transform:translateY(8px)
   }
 
   .brand img{
-    height:72px;
-    max-width:280px
+    height:60px;
+
+    max-width:195px
   }
 
   .main-nav{
@@ -432,16 +661,17 @@ footer{
 
   .main-nav a{
     padding:8px;
+
     font-size:14px
   }
 
   .hero{
-    min-height:calc(100vh - 82px);
     padding:55px 0
   }
 
   .hero-grid{
     grid-template-columns:1fr;
+
     gap:35px
   }
 
@@ -466,9 +696,10 @@ footer{
   }
 }
 
-/* ================================
+
+/* =========================================
    MOBILE
-   ================================ */
+   ========================================= */
 
 @media(max-width:520px){
 
@@ -478,12 +709,32 @@ footer{
   }
 
   .header-inner{
-    min-height:76px
+    min-height:70px
+  }
+
+  /*
+     Mobile floating logo
+  */
+
+  .brand{
+    width:185px;
+    height:68px;
+
+    padding:8px 14px;
+
+    border-radius:15px;
+
+    transform:translateY(8px)
+  }
+
+  .brand:hover{
+    transform:translateY(6px)
   }
 
   .brand img{
-    height:64px;
-    max-width:230px
+    height:48px;
+
+    max-width:160px
   }
 
   .main-nav a:not(.nav-cta){
@@ -492,6 +743,7 @@ footer{
 
   .content-block{
     width:calc(100% - 28px);
+
     padding:24px
   }
 
@@ -501,12 +753,15 @@ footer{
 
   .footer-inner{
     padding:22px 0;
+
     flex-direction:column;
+
     align-items:flex-start
   }
 
   .hero{
     min-height:auto;
+
     padding:55px 0 75px
   }
 
