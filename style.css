@@ -1,14 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
+
+/* =========================================================
+   ENTITLEX — GLOBAL VARIABLES
+   ========================================================= */
+
 :root{
   --bg:#050914;
+  --bg-soft:#081225;
+
   --text:#eaf2ff;
   --muted:#a9b8d0;
+
   --line:rgba(255,255,255,.11);
+  --line-strong:rgba(255,255,255,.18);
+
   --blue:#35c2f5;
   --blue2:#1d4ed8;
+
   --panel:rgba(255,255,255,.055);
+  --panel-hover:rgba(255,255,255,.075);
+
+  --shadow:0 25px 70px rgba(0,0,0,.22);
+
+  --radius:14px;
 }
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 *{
   box-sizing:border-box;
@@ -21,54 +42,93 @@ html{
 body{
   margin:0;
   min-height:100vh;
+
   font-family:'IBM Plex Sans',sans-serif;
+
   background:var(--bg);
   color:var(--text);
+
   overflow-x:hidden;
+
+  line-height:1.6;
 }
 
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-3;
-  background:
-    radial-gradient(
-      circle at 75% 20%,
-      rgba(29,78,216,.20),
-      transparent 34%
-    ),
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(53,194,245,.10),
-      transparent 30%
-    ),
-    #050914;
-}
-
-body:after{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-2;
-  opacity:.55;
-  background-image:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,.8) 0 1px,
-      transparent 1.5px
-    );
-  background-size:83px 91px;
-  background-position:12px 18px;
+img{
+  max-width:100%;
+  height:auto;
 }
 
 a{
   color:inherit;
 }
 
-img{
-  max-width:100%;
+button,
+input,
+textarea{
+  font-family:inherit;
 }
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+body:before{
+  content:"";
+
+  position:fixed;
+  inset:0;
+
+  z-index:-3;
+
+  background:
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(29,78,216,.20),
+      transparent 34%
+    ),
+
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(53,194,245,.10),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #050914 0%,
+      #061022 55%,
+      #050914 100%
+    );
+}
+
+body:after{
+  content:"";
+
+  position:fixed;
+  inset:0;
+
+  z-index:-2;
+
+  opacity:.48;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.8) 0 1px,
+      transparent 1.5px
+    );
+
+  background-size:83px 91px;
+  background-position:12px 18px;
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   COMMON WRAPPER
+   ========================================================= */
 
 .wrap{
   width:min(1120px,calc(100% - 40px));
@@ -76,21 +136,35 @@ img{
 }
 
 
-/* =========================================
+/* =========================================================
+   ACCESSIBILITY / FOCUS
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+  outline:2px solid var(--blue);
+  outline-offset:3px;
+}
+
+
+/* =========================================================
    HEADER
-   ========================================= */
+   ========================================================= */
 
 header{
   position:sticky;
   top:0;
+
   z-index:20;
 
   min-height:124px;
 
-  background:rgba(5,9,20,.84);
+  background:rgba(5,9,20,.86);
 
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
 
   border-bottom:1px solid var(--line);
 }
@@ -103,23 +177,28 @@ header{
   margin:auto;
 
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
 
   gap:24px;
 }
 
 
-/* =========================================
-   LOGO BADGE
-   ========================================= */
+/* =========================================================
+   FLOATING LOGO BADGE
+   ========================================================= */
 
 .brand{
   position:relative;
 
   display:flex;
+
   align-items:center;
   justify-content:center;
+
+  flex-shrink:0;
 
   width:310px;
   height:108px;
@@ -188,16 +267,17 @@ header{
 }
 
 
-/* =========================================
+/* =========================================================
    NAVIGATION
-   ========================================= */
+   ========================================================= */
 
 .main-nav{
   display:flex;
+
   align-items:center;
   justify-content:flex-end;
 
-  gap:8px;
+  gap:6px;
 }
 
 .main-nav a{
@@ -228,9 +308,9 @@ header{
 }
 
 
-/* =========================================
+/* =========================================================
    HEADER CTA
-   ========================================= */
+   ========================================================= */
 
 .nav-cta{
   background:
@@ -268,17 +348,18 @@ header{
 }
 
 
-/* =========================================
+/* =========================================================
    HERO
-   ========================================= */
+   ========================================================= */
 
 .hero{
   min-height:calc(100vh - 124px);
 
   display:flex;
+
   align-items:center;
 
-  padding:72px 0;
+  padding:80px 0;
 }
 
 .hero-grid{
@@ -316,6 +397,8 @@ h3{
 }
 
 h1{
+  max-width:760px;
+
   font-size:clamp(44px,6vw,76px);
 
   line-height:1.02;
@@ -338,9 +421,9 @@ h1{
 }
 
 
-/* =========================================
+/* =========================================================
    HERO BUTTONS
-   ========================================= */
+   ========================================================= */
 
 .hero-actions{
   display:flex;
@@ -359,7 +442,7 @@ h1{
   align-items:center;
   justify-content:center;
 
-  min-height:48px;
+  min-height:50px;
 
   padding:13px 20px;
 
@@ -376,6 +459,9 @@ h1{
     border-color .2s ease,
     filter .2s ease;
 }
+
+
+/* Primary */
 
 .btn-primary{
   background:
@@ -407,6 +493,9 @@ h1{
   filter:brightness(1.08);
 }
 
+
+/* Secondary */
+
 .btn-secondary{
   border:1px solid var(--line);
 
@@ -427,18 +516,18 @@ h1{
 }
 
 
-/* =========================================
+/* =========================================================
    HERO ICON
-   ========================================= */
+   ========================================================= */
 
 .hero-mark{
+  width:100%;
+
   display:flex;
 
   justify-content:center;
 
   align-items:center;
-
-  width:100%;
 }
 
 .ribbon{
@@ -489,12 +578,12 @@ h1{
 }
 
 
-/* =========================================
+/* =========================================================
    INNER PAGES
-   ========================================= */
+   ========================================================= */
 
 .page{
-  padding:76px 0 100px;
+  padding:80px 0 100px;
 
   min-height:calc(100vh - 124px);
 }
@@ -504,20 +593,33 @@ h1{
 
   margin:auto;
 
+  padding:50px;
+
   background:var(--panel);
 
   border:1px solid var(--line);
 
-  padding:48px;
-
   border-radius:18px;
 
-  box-shadow:
-    0 25px 70px rgba(0,0,0,.2);
+  box-shadow:var(--shadow);
+
+  transition:
+    border-color .25s ease,
+    background .25s ease;
+}
+
+.content-block:hover{
+  border-color:rgba(53,194,245,.16);
+
+  background:rgba(255,255,255,.06);
 }
 
 .content-block h2{
   font-size:clamp(32px,4vw,52px);
+
+  line-height:1.05;
+
+  letter-spacing:-.035em;
 
   margin:0 0 22px;
 }
@@ -531,14 +633,28 @@ h1{
 }
 
 
-/* =========================================
+/* =========================================================
    SERVICES
-   ========================================= */
+   ========================================================= */
 
 .feature{
-  padding:22px 0;
+  padding:24px 0;
 
   border-top:1px solid var(--line);
+
+  transition:
+    padding-left .2s ease,
+    border-color .2s ease;
+}
+
+.feature:first-of-type{
+  border-top:0;
+}
+
+.feature:hover{
+  padding-left:8px;
+
+  border-color:rgba(53,194,245,.30);
 }
 
 .feature h3{
@@ -552,9 +668,9 @@ h1{
 }
 
 
-/* =========================================
+/* =========================================================
    PROCESS
-   ========================================= */
+   ========================================================= */
 
 .process-track{
   display:grid;
@@ -596,8 +712,8 @@ h1{
 }
 
 .dot{
-  width:38px;
-  height:38px;
+  width:40px;
+  height:40px;
 
   display:grid;
 
@@ -612,9 +728,14 @@ h1{
       var(--blue2)
     );
 
+  color:#fff;
+
   font-weight:700;
 
   margin-bottom:20px;
+
+  box-shadow:
+    0 8px 20px rgba(29,78,216,.22);
 }
 
 .process-step h3{
@@ -628,9 +749,9 @@ h1{
 }
 
 
-/* =========================================
+/* =========================================================
    CONTACT FORM
-   ========================================= */
+   ========================================================= */
 
 .contact-form{
   display:grid;
@@ -648,7 +769,7 @@ h1{
 
   border-radius:9px;
 
-  background:rgba(0,0,0,.2);
+  background:rgba(0,0,0,.20);
 
   color:var(--text);
 
@@ -664,9 +785,14 @@ h1{
     background .2s ease;
 }
 
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:#8191aa;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus{
-  border-color:rgba(53,194,245,.7);
+  border-color:rgba(53,194,245,.70);
 
   background:rgba(0,0,0,.28);
 
@@ -694,7 +820,7 @@ h1{
       var(--blue2)
     );
 
-  color:white;
+  color:#fff;
 
   font:600 16px 'IBM Plex Sans';
 
@@ -720,9 +846,9 @@ h1{
 }
 
 
-/* =========================================
+/* =========================================================
    FOOTER
-   ========================================= */
+   ========================================================= */
 
 footer{
   border-top:1px solid var(--line);
@@ -741,6 +867,12 @@ footer{
 
   gap:20px;
 }
+
+
+/*
+   Footer uses the logo without
+   the floating badge.
+ */
 
 .footer-inner .brand{
   width:auto;
@@ -783,39 +915,86 @@ footer{
 }
 
 
-/* =========================================
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media(max-width:1100px){
+
+  .header-inner{
+    width:calc(100% - 32px);
+  }
+
+  .brand{
+    width:275px;
+
+    height:100px;
+  }
+
+  .brand img{
+    height:76px;
+
+    max-width:240px;
+  }
+
+  .main-nav a{
+    padding:9px 10px;
+
+    font-size:14px;
+  }
+
+  .hero-grid{
+    gap:40px;
+  }
+
+  h1{
+    font-size:clamp(42px,6vw,68px);
+  }
+
+  .ribbon{
+    max-width:420px;
+  }
+}
+
+
+/* =========================================================
    TABLET
-   ========================================= */
+   ========================================================= */
 
 @media(max-width:900px){
+
+  header{
+    min-height:105px;
+  }
 
   .header-inner{
     min-height:105px;
   }
 
   .brand{
-    width:260px;
-    height:92px;
+    width:250px;
 
-    padding:9px 20px;
+    height:88px;
 
-    border-radius:20px;
+    padding:8px 18px;
+
+    border-radius:19px;
   }
 
   .brand img{
-    height:70px;
+    height:66px;
 
-    max-width:225px;
+    max-width:215px;
   }
 
   .main-nav{
-    gap:3px;
+    gap:2px;
   }
 
   .main-nav a{
-    padding:8px 9px;
+    padding:8px 8px;
 
-    font-size:14px;
+    font-size:13px;
   }
 
   .hero{
@@ -827,11 +1006,11 @@ footer{
   .hero-grid{
     grid-template-columns:1fr 1fr;
 
-    gap:35px;
+    gap:30px;
   }
 
   h1{
-    font-size:clamp(42px,6vw,64px);
+    font-size:clamp(42px,6vw,62px);
   }
 
   .lede{
@@ -839,7 +1018,7 @@ footer{
   }
 
   .ribbon{
-    max-width:390px;
+    max-width:360px;
   }
 
   .process-track{
@@ -852,17 +1031,17 @@ footer{
 }
 
 
-/* =========================================
-   MOBILE — 700px
-   ========================================= */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media(max-width:700px){
 
   /*
-     Stack header vertically.
-     This keeps ALL navigation accessible
-     without requiring JavaScript.
-  */
+     Mobile header becomes vertical.
+     This gives the logo enough room while
+     keeping navigation accessible.
+   */
 
   header{
     position:relative;
@@ -884,6 +1063,10 @@ footer{
     gap:10px;
   }
 
+  /*
+     Logo badge
+   */
+
   .brand{
     width:235px;
 
@@ -895,15 +1078,14 @@ footer{
   }
 
   .brand img{
-    height:62px;
+    height:61px;
 
     max-width:205px;
   }
 
   /*
-     Navigation becomes a compact
-     horizontal scrolling row.
-  */
+     Navigation row
+   */
 
   .main-nav{
     width:100%;
@@ -941,25 +1123,22 @@ footer{
     padding:8px 13px;
   }
 
-  /*
-     Hero becomes one column.
-  */
+
+  /* =========================================
+     HERO
+     ========================================= */
 
   .hero{
     min-height:auto;
 
-    padding:55px 0 70px;
+    padding:50px 0 70px;
   }
 
   .hero-grid{
     grid-template-columns:1fr;
 
-    gap:35px;
+    gap:32px;
   }
-
-  /*
-     Icon appears ABOVE text.
-  */
 
   .hero-mark{
     order:-1;
@@ -968,13 +1147,17 @@ footer{
   }
 
   .ribbon{
-    width:min(100%,330px);
+    width:min(100%,320px);
+
+    max-width:320px;
   }
 
   .eyebrow-line{
     margin-bottom:16px;
 
     font-size:12px;
+
+    line-height:1.5;
 
     letter-spacing:.07em;
   }
@@ -1006,9 +1189,10 @@ footer{
     padding:12px 17px;
   }
 
-  /*
-     Inner pages
-  */
+
+  /* =========================================
+     INNER PAGES
+     ========================================= */
 
   .page{
     padding:50px 0 70px;
@@ -1034,9 +1218,10 @@ footer{
     line-height:1.7;
   }
 
-  /*
-     Process cards
-  */
+
+  /* =========================================
+     PROCESS
+     ========================================= */
 
   .process-track{
     grid-template-columns:1fr;
@@ -1048,9 +1233,10 @@ footer{
     padding:21px;
   }
 
-  /*
-     Footer
-  */
+
+  /* =========================================
+     FOOTER
+     ========================================= */
 
   .footer-inner{
     min-height:120px;
@@ -1068,14 +1254,14 @@ footer{
 }
 
 
-/* =========================================
-   SMALL MOBILE — 480px
-   ========================================= */
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
 @media(max-width:480px){
 
   .wrap{
-    width:calc(100% - 28px);
+    width:calc(100% - 24px);
   }
 
   header{
@@ -1088,9 +1274,8 @@ footer{
     gap:8px;
   }
 
-  /*
-     Smaller logo badge
-  */
+
+  /* Logo */
 
   .brand{
     width:205px;
@@ -1108,14 +1293,15 @@ footer{
   }
 
   .brand img{
-    height:55px;
+    height:54px;
 
     max-width:180px;
   }
 
-  .main-nav{
-    justify-content:flex-start;
 
+  /* Navigation */
+
+  .main-nav{
     gap:2px;
   }
 
@@ -1129,9 +1315,8 @@ footer{
     padding:7px 11px;
   }
 
-  /*
-     Hero
-  */
+
+  /* Hero */
 
   .hero{
     padding:42px 0 60px;
@@ -1146,13 +1331,13 @@ footer{
   }
 
   .ribbon{
-    width:min(100%,280px);
+    width:min(100%,275px);
+
+    max-width:275px;
   }
 
   .eyebrow-line{
     font-size:11px;
-
-    line-height:1.5;
   }
 
   h1{
@@ -1171,10 +1356,8 @@ footer{
     line-height:1.65;
   }
 
-  /*
-     Buttons become comfortable
-     touch targets.
-  */
+
+  /* Hero buttons */
 
   .hero-actions{
     display:grid;
@@ -1190,7 +1373,7 @@ footer{
   .btn-secondary{
     width:100%;
 
-    min-height:48px;
+    min-height:50px;
 
     padding:12px 10px;
 
@@ -1199,9 +1382,8 @@ footer{
     text-align:center;
   }
 
-  /*
-     Content pages
-  */
+
+  /* Inner pages */
 
   .page{
     padding:38px 0 55px;
@@ -1225,6 +1407,9 @@ footer{
     font-size:15.5px;
   }
 
+
+  /* Services */
+
   .feature{
     padding:19px 0;
   }
@@ -1233,9 +1418,8 @@ footer{
     font-size:19px;
   }
 
-  /*
-     Contact form
-  */
+
+  /* Contact */
 
   .contact-form input,
   .contact-form textarea{
@@ -1251,12 +1435,11 @@ footer{
   .contact-form button{
     width:100%;
 
-    min-height:48px;
+    min-height:50px;
   }
 
-  /*
-     Footer
-  */
+
+  /* Footer */
 
   .footer-inner{
     min-height:115px;
@@ -1274,9 +1457,9 @@ footer{
 }
 
 
-/* =========================================
-   VERY SMALL DEVICES — 360px
-   ========================================= */
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
 
 @media(max-width:360px){
 
@@ -1287,7 +1470,7 @@ footer{
   }
 
   .brand img{
-    height:49px;
+    height:48px;
 
     max-width:165px;
   }
@@ -1315,7 +1498,9 @@ footer{
   }
 
   .ribbon{
-    width:250px;
+    width:245px;
+
+    max-width:245px;
   }
 
   .hero-actions{
@@ -1328,9 +1513,9 @@ footer{
 }
 
 
-/* =========================================
+/* =========================================================
    REDUCED MOTION
-   ========================================= */
+   ========================================================= */
 
 @media(prefers-reduced-motion:reduce){
 
