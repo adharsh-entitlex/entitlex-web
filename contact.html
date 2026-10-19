@@ -7,7 +7,58 @@
     </a>
     <nav class="main-nav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
+      <a href="services.html">Services</a><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#07111f"><title>Contact EntitleX Technologies</title><meta name="description" content="Contact EntitleX about software licensing, IT asset management, SaaS management, compliance or system integration."><script>(function(){try{var t=localStorage.getItem("entitlex-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);else document.documentElement.setAttribute("data-theme","dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script><link rel="stylesheet" href="style.css"><link rel="icon" href="favicon.ico" type="image/x-icon"></head><body>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="EntitleX home">
+      <img src="images/entitlex-logo.png" class="logo-dark" alt="EntitleX Technologies">
+      <img src="images/entitlex-logo-light.png" class="logo-light" alt="" aria-hidden="true">
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="process.html">How we work</a>
+      <a href="about.html">About</a>
+      <button class="theme-toggle desktop-theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch colour theme">☀️ Light</button>
+      <a href="contact.html" class="nav-cta">Talk to us</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="process.html">How we work</a>
+    <a href="about.html">About</a>
+    <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">☀️ Light</button>
+    <a href="contact.html" class="mobile-menu-cta">Talk to us</a>
+  </nav>
+</header>
+<main><section class="page contact-page"><div class="wrap"><div class="contact-layout"><div class="contact-copy"><span class="section-label">CONTACT</span><h1>Let's understand what you're trying to solve.</h1><p class="page-intro">Tell us about your current software environment, licensing requirement, technology challenge or integration need. We'll start the conversation from there.</p><div class="contact-details"><div class="contact-detail"><span>EMAIL</span><a href="mailto:info@entitlex.in">info@entitlex.in</a></div><div class="contact-detail"><span>WHAT TO EXPECT</span><p>Share the requirement and any useful context. We'll review the information and discuss an appropriate next step.</p></div><div class="contact-detail"><span>GOOD TO INCLUDE</span><p>The software or systems involved, your current challenge, and what outcome you are working toward.</p></div></div></div>
+<div class="contact-card"><h2>Start a conversation</h2><p class="form-note">Please provide a few details so we can understand your requirement.</p><p id="form-status" class="form-note" role="status" aria-live="polite" hidden></p><form class="contact-form" action="https://formsubmit.co/info@entitlex.in" method="POST">
+<input type="hidden" name="_subject" value="New website enquiry — EntitleX Solutions">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://entitlex.in/contact.html?submitted=true">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true"><label for="name">Name</label><input id="name" type="text" name="name" placeholder="Your name" autocomplete="name" required><label for="email">Business email</label><input id="email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required><label for="company">Company</label><input id="company" type="text" name="company" placeholder="Company name" autocomplete="organization"><label for="service">Area of interest</label><select id="service" name="service"><option value="">Select an option</option><option>Software licensing &amp; procurement</option><option>Software asset management</option><option>License compliance &amp; audit readiness</option><option>SaaS &amp; subscription management</option><option>Vendor &amp; contract management</option><option>IT systems integration</option><option>Other</option></select><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us briefly about your requirement." required></textarea><button type="submit">Talk to EntitleX</button><p class="privacy-note">By submitting this form, you are choosing to contact EntitleX about your enquiry.</p></form></div></div></div></section></main>
+<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-main"><a href="index.html" class="footer-brand"><img src="images/entitlex-logo.png" class="logo-dark" alt="EntitleX Technologies"><img src="images/entitlex-logo-light.png" class="logo-light" alt="" aria-hidden="true"></a><p>Software licensing, IT asset management and technology integration for growing businesses.</p></div><div class="footer-column"><h3>Services</h3><a href="services.html">Software Licensing</a><a href="services.html">Asset Management</a><a href="services.html">Compliance</a><a href="services.html">SaaS Management</a><a href="services.html">System Integration</a></div><div class="footer-column"><h3>Company</h3><a href="about.html">About</a><a href="process.html">How we work</a><a href="contact.html">Contact</a></div><div class="footer-column"><h3>Contact</h3><a href="mailto:info@entitlex.in">info@entitlex.in</a><a href="contact.html">Talk to us →</a></div></div><div class="wrap footer-bottom"><span>© 2026 EntitleX Technologies. All rights reserved.</span><span>Software licensing &amp; system integration</span></div></footer>  <script src="menu.js" defer></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const status = document.getElementById("form-status");
+    const form = document.querySelector(".contact-form");
+    if (params.get("submitted") === "true" && status) {
+      status.hidden = false;
+      status.textContent = "Thank you — your enquiry has been submitted. Our team will get back to you soon.";
+      status.style.color = "var(--accent)";
+      if (form) form.reset();
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  });
+</script>
+</body></html>
+
       <a href="process.html">How we work</a>
       <a href="about.html">About</a>
       <button class="theme-toggle desktop-theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch colour theme">☀️ Light</button>
