@@ -730,3 +730,9 @@ html[data-theme="light"] .footer-brand .logo-light{display:block!important}
 .footer-areas a{color:var(--muted)}
 .footer-areas a:hover{color:var(--accent)}
 @media (max-width:600px){.footer-areas{gap:8px 14px;font-size:12px}}
+
+/* Location pages */
+.page-hero .cta-actions{justify-content:flex-start}
+.local-copy h2{margin-bottom:18px}
+.local-copy p{margin-top:15px;font-size:15.5px;line-height:1.75;color:var(--muted)}
+.local-copy p:first-of-type{margin-top:0}
