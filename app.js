@@ -32,6 +32,12 @@
     });
   });
 
+  var initialTheme = root.getAttribute("data-theme");
+  if (!initialTheme) {
+    try { initialTheme = localStorage.getItem("entitlex-theme"); } catch (e) {}
+  }
+  applyTheme(initialTheme || "dark");
+
   /* ---------- Header + scroll progress ---------- */
   var header = document.querySelector(".site-header");
   var progress = document.querySelector(".scroll-progress");
