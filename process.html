@@ -1,34 +1,220 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#07111f"><title>How We Work | EntitleX Technologies</title><meta name="description" content="A structured approach to software licensing, IT asset management and technology integration from EntitleX."><script>(function(){try{var t=localStorage.getItem("entitlex-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);else document.documentElement.setAttribute("data-theme","dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script><link rel="stylesheet" href="style.css"><link rel="icon" href="favicon.ico" type="image/x-icon"></head><body>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05090f">
+<title>How We Work in India — Delivery, SLAs &amp; Onboarding | EntitleX</title>
+<meta name="description" content="EntitleX India delivery model: baseline in week one, business case in week two, execution in weeks three to eight, then a managed monthly rhythm — with IST support and INR/GST invoicing.">
+<script>(function(){try{var t=localStorage.getItem("entitlex-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark")}catch(e){}})();</script>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
 <header class="site-header" id="site-header">
+  <div class="scroll-progress" aria-hidden="true"></div>
   <div class="header-inner">
     <a href="index.html" class="brand" aria-label="EntitleX home">
-      <img src="images/entitlex-logo.png" class="logo-dark" alt="EntitleX Technologies">
-      <img src="images/entitlex-logo-light.png" class="logo-light" alt="" aria-hidden="true">
+      <img src="images/entitlex-logo.png" class="brand-logo logo-dark" alt="EntitleX">
+      <img src="images/entitlex-logo-light.png" class="brand-logo logo-light" alt="" aria-hidden="true">
     </a>
-    <nav class="main-nav" aria-label="Primary navigation">
+    <nav class="main-nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="process.html">How we work</a>
+      <div class="nav-item">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Solutions
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="nav-menu" role="menu">
+          <a href="services.html#resale" role="menuitem"><span class="mi">01</span><span><strong>Software &amp; cloud resale</strong><small>Microsoft 365, Azure, AWS, Google, Adobe and 200+ vendors</small></span></a>
+          <a href="services.html#web" role="menuitem"><span class="mi">02</span><span><strong>Web &amp; product development</strong><small>Marketing sites, portals and customer platforms</small></span></a>
+          <a href="services.html#dashboards" role="menuitem"><span class="mi">03</span><span><strong>Dashboards &amp; reporting</strong><small>Licence, spend and operations visibility in one place</small></span></a>
+          <a href="services.html#ai" role="menuitem"><span class="mi">04</span><span><strong>AI automation</strong><small>Workflows that remove manual work from IT and finance</small></span></a>
+        </div>
+      </div>
+      <a href="pricing.html">Pricing</a>
+      <a href="process.html" aria-current="page">How we work</a>
       <a href="about.html">About</a>
-      <button class="theme-toggle desktop-theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch colour theme">☀️ Light</button>
-      <a href="contact.html" class="nav-cta">Talk to us</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme"></button>
+      <a href="contact.html" class="nav-cta magnetic">Get a quote</a>
     </nav>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="process.html">How we work</a>
-    <a href="about.html">About</a>
-    <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">☀️ Light</button>
-    <a href="contact.html" class="mobile-menu-cta">Talk to us</a>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a class="mm-link" href="index.html">Home</a>
+    <div class="mm-group">Solutions</div>
+    <a class="mm-link" href="services.html#resale">Software &amp; cloud resale</a>
+    <a class="mm-link" href="services.html#web">Web &amp; product development</a>
+    <a class="mm-link" href="services.html#dashboards">Dashboards &amp; reporting</a>
+    <a class="mm-link" href="services.html#ai">AI automation</a>
+    <div class="mm-group">Company</div>
+    <a class="mm-link" href="pricing.html">Pricing</a>
+    <a class="mm-link" href="process.html">How we work</a>
+    <a class="mm-link" href="about.html">About</a>
+    <a href="contact.html" class="btn btn-primary">Get a quote</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" style="margin:14px 4px 0"></button>
   </nav>
 </header>
-<main><section class="page"><div class="wrap"><div class="page-hero"><span class="section-label">HOW WE WORK</span><h1>A structured approach to software and technology management.</h1><p class="page-intro">Every organization has a different technology environment. We begin by understanding the current state, then develop practical recommendations and support implementation.</p></div>
-<div class="process-large"><article class="process-large-step"><div class="process-large-number">01</div><div><h2>Assess</h2><p>Review your software environment, licensing position, deployments, subscriptions and business requirements.</p></div></article><article class="process-large-step"><div class="process-large-number">02</div><div><h2>Recommend</h2><p>Identify opportunities to improve visibility, utilization, procurement and ongoing management.</p></div></article><article class="process-large-step"><div class="process-large-number">03</div><div><h2>Implement</h2><p>Support the execution of agreed recommendations across procurement, deployment, vendors and technology workflows.</p></div></article><article class="process-large-step"><div class="process-large-number">04</div><div><h2>Manage</h2><p>Maintain visibility across licenses, subscriptions, vendors and renewals as your environment evolves.</p></div></article></div>
-<div class="principles-strip"><div><strong>Understand first.</strong><span>Start with the current environment and requirements.</span></div><div><strong>Recommend clearly.</strong><span>Prioritize practical, explainable actions.</span></div><div><strong>Implement carefully.</strong><span>Support agreed changes with attention to business continuity.</span></div></div>
-<div class="page-cta"><h2>Ready to discuss your environment?</h2><p>Let's start with where you are today.</p><a href="contact.html" class="btn-primary">Start a conversation</a></div></div></section></main>
-<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-main"><a href="index.html" class="footer-brand"><img src="images/entitlex-logo.png" class="logo-dark" alt="EntitleX Technologies"><img src="images/entitlex-logo-light.png" class="logo-light" alt="" aria-hidden="true"></a><p>Software licensing, IT asset management and technology integration for growing businesses.</p></div><div class="footer-column"><h3>Services</h3><a href="services.html">Software Licensing</a><a href="services.html">Asset Management</a><a href="services.html">Compliance</a><a href="services.html">SaaS Management</a><a href="services.html">System Integration</a></div><div class="footer-column"><h3>Company</h3><a href="about.html">About</a><a href="process.html">How we work</a><a href="contact.html">Contact</a></div><div class="footer-column"><h3>Contact</h3><a href="mailto:info@entitlex.in">info@entitlex.in</a><a href="contact.html">Talk to us →</a></div></div><div class="wrap footer-bottom"><span>© 2026 EntitleX Technologies. All rights reserved.</span><span>Software licensing &amp; system integration</span></div></footer>  <script src="menu.js" defer></script>
-</body></html>
+
+<main>
+<section class="page-hero">
+  <div class="shell">
+    <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>How we work</span></div>
+    <span class="eyebrow" data-reveal><span class="dot"></span>Ten days to a decision · eight weeks to delivery</span>
+    <h1 data-reveal style="--d:60ms">A short path from invoice to implemented.</h1>
+    <p class="lede" data-reveal style="--d:120ms">No 90-day discovery. No strategy deck that never becomes anything. You get a baseline, a business case, an execution window and a run rhythm — each with a named owner, priced in INR, supported in IST.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:64px">
+  <div class="shell">
+    <div class="steps two" data-reveal>
+      <div class="step" style="padding:32px 30px 32px 0;border-bottom:1px solid var(--line)">
+        <span class="step-num">PHASE 01 · WEEK 1</span>
+        <h3 style="font-size:22px">Baseline the estate</h3>
+        <p style="font-size:14px">We collect invoices, licence statements, tenant data and cloud billing exports, then reconcile entitlement against actual assignment and consumption. You see exactly what exists, what it costs in rupees — including GST and FX exposure — and who owns it.</p>
+        <p class="small" style="margin-top:14px;color:var(--muted-2)">Deliverable: licence &amp; spend register, ownership map, utilisation baseline.</p>
+      </div>
+      <div class="step" style="padding:32px 0 32px 30px;border-right:0;border-bottom:1px solid var(--line)">
+        <span class="step-num">PHASE 02 · WEEK 2</span>
+        <h3 style="font-size:22px">Build the business case</h3>
+        <p style="font-size:14px">Every finding becomes an option with a value, an effort estimate and a risk note. We rank by payback, not by how interesting the work is. You decide what proceeds.</p>
+        <p class="small" style="margin-top:14px;color:var(--muted-2)">Deliverable: prioritised action plan, INR savings model, signed-off scope and PO-ready quote.</p>
+      </div>
+      <div class="step" style="padding:32px 30px 32px 0;border-bottom:1px solid var(--line)">
+        <span class="step-num">PHASE 03 · WEEKS 3–8</span>
+        <h3 style="font-size:22px">Execute in sprints</h3>
+        <p style="font-size:14px">Procurement, migration, security hardening, development and automation run in two-week sprints with a demo at the end of each. Changes are logged; nothing is silently altered.</p>
+        <p class="small" style="margin-top:14px;color:var(--muted-2)">Deliverable: working systems, change log, acceptance sign-off per sprint.</p>
+      </div>
+      <div class="step" style="padding:32px 0 32px 30px;border-right:0;border-bottom:1px solid var(--line)">
+        <span class="step-num">PHASE 04 · ONGOING</span>
+        <h3 style="font-size:22px">Run and review</h3>
+        <p style="font-size:14px">Renewals, IST-hours support, reporting and optimisation continue on a monthly rhythm. Quarterly reviews compare results against the original baseline and reset priorities.</p>
+        <p class="small" style="margin-top:14px;color:var(--muted-2)">Deliverable: quarterly review pack, renewal calendar, updated dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Service commitments</span>
+      <h2>Numbers we publish, not numbers we imply.</h2>
+      <p>These apply to every managed engagement. Project SLAs are agreed separately in the statement of work.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card" data-reveal style="padding:0;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse;font-size:13.5px">
+          <tbody>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:15px 20px;color:var(--muted)">Quote turnaround</td><td style="padding:15px 20px;text-align:right;font-weight:600">1 working day</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:15px 20px;color:var(--muted)">Licence provisioning</td><td style="padding:15px 20px;text-align:right;font-weight:600">2 working days</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:15px 20px;color:var(--muted)">Critical incident acknowledgement (IST)</td><td style="padding:15px 20px;text-align:right;font-weight:600">15 minutes</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:15px 20px;color:var(--muted)">Standard ticket first response</td><td style="padding:15px 20px;text-align:right;font-weight:600">Same working day</td></tr>
+            <tr><td style="padding:15px 20px;color:var(--muted)">GST invoice after order</td><td style="padding:15px 20px;text-align:right;font-weight:600">1 working day</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card" data-reveal style="--d:100ms;padding:0;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse;font-size:13.5px">
+          <tbody>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:15px 20px;color:var(--muted)">Savings review</td><td style="padding:15px 20px;text-align:right;font-weight:600">Free, 10 working days</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:15px 20px;color:var(--muted)">First usable website release</td><td style="padding:15px 20px;text-align:right;font-weight:600">4–6 weeks</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:15px 20px;color:var(--muted)">Dashboard first version</td><td style="padding:15px 20px;text-align:right;font-weight:600">2–3 weeks</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:15px 20px;color:var(--muted)">Automation pilot live</td><td style="padding:15px 20px;text-align:right;font-weight:600">3–4 weeks</td></tr>
+            <tr><td style="padding:15px 20px;color:var(--muted)">Handover pack at exit</td><td style="padding:15px 20px;text-align:right;font-weight:600">Within 5 working days</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell split reverse">
+    <div data-reveal>
+      <div class="trust-grid">
+        <div class="trust-card"><span class="ti"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><h3>Named owner</h3><p>One account manager and one technical lead, introduced before signature and present at every review.</p></div>
+        <div class="trust-card"><span class="ti"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span><h3>No silent changes</h3><p>Every tenant, licence or infrastructure change is logged with a reason, a requester and a timestamp.</p></div>
+        <div class="trust-card"><span class="ti"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></span><h3>Measured in rupees</h3><p>Savings are reported in INR against the baseline you signed, with the calculation shown — not a marketing percentage.</p></div>
+        <div class="trust-card"><span class="ti"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span><h3>Exit ready</h3><p>Credentials, code and documentation are handed over in five working days if you choose to leave.</p></div>
+      </div>
+    </div>
+    <div class="split-copy" data-reveal style="--d:100ms">
+      <span class="eyebrow"><span class="dot"></span>Onboarding</span>
+      <h2>What the first fortnight actually looks like.</h2>
+      <p>We ask for a kickoff call, read-only access to the billing records and one person who can answer questions about contracts. That's usually enough to start — we'll also collect your GST details and vendor onboarding forms on day one.</p>
+      <ul class="checks">
+        <li><span class="ci"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Day 1</strong><span>Kickoff, access request, NDA/DPA, GSTIN and PO details, named contacts and escalation path confirmed.</span></div></li>
+        <li><span class="ci"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Day 3</strong><span>Invoice and licence data reconciled; anomalies flagged while there's still time to act.</span></div></li>
+        <li><span class="ci"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Day 7</strong><span>First dashboard view live, renewal calendar shared, immediate risks escalated.</span></div></li>
+        <li><span class="ci"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Day 10</strong><span>Business case reviewed with you; scope, dates and owners agreed in writing.</span></div></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:26px">Start onboarding</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap">
+  <div class="shell">
+    <div class="cta-box" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Ready when you are</span>
+      <h2>Ten days from now, you could know exactly where the money went.</h2>
+      <p>Book the review. Keep the report whether you work with us or not.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary magnetic">Book the free review</a>
+        <a href="pricing.html" class="btn btn-ghost">See plans</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/entitlex-logo.png" class="logo-dark" alt="EntitleX">
+        <img src="images/entitlex-logo-light.png" class="logo-light" alt="" aria-hidden="true">
+        <p>The software, cloud and AI partner for Indian businesses that would rather buy outcomes than manage vendors. INR billing · GST invoicing · IST support.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-4V9Z"/></svg></a>
+          <a href="mailto:hello@entitlex.in" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="services.html#resale">Software &amp; cloud resale</a>
+        <a href="services.html#m365">Microsoft 365 &amp; security</a>
+        <a href="services.html#optimisation">Licence optimisation</a>
+        <a href="services.html#web">Web &amp; product</a>
+        <a href="services.html#dashboards">Dashboards</a>
+        <a href="services.html#ai">AI automation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About EntitleX</a>
+        <a href="process.html">How we work</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@entitlex.in">hello@entitlex.in</a>
+        <a href="mailto:info@entitlex.in">info@entitlex.in</a>
+        <a href="contact.html">Request a quote</a>
+        <a href="contact.html">Book a review</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> EntitleX Technologies. All rights reserved.</span>
+      <div><a href="about.html">Privacy</a><a href="about.html">Terms</a><a href="process.html">Service commitments</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" type="button" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,39 +1,214 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#07111f"><title>Services | EntitleX Technologies</title><meta name="description" content="Software licensing, IT asset management, compliance, SaaS management, vendor management and system integration services from EntitleX."><script>(function(){try{var t=localStorage.getItem("entitlex-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);else document.documentElement.setAttribute("data-theme","dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script><link rel="stylesheet" href="style.css"><link rel="icon" href="favicon.ico" type="image/x-icon"></head><body>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05090f">
+<title>Services — Software Resale, Web, Dashboards &amp; AI in India | EntitleX</title>
+<meta name="description" content="Software and cloud resale in INR, licence optimisation, Microsoft 365 management, web development, dashboards and DPDP-ready AI automation — delivered by one accountable team in India.">
+<script>(function(){try{var t=localStorage.getItem("entitlex-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark")}catch(e){}})();</script>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
 <header class="site-header" id="site-header">
+  <div class="scroll-progress" aria-hidden="true"></div>
   <div class="header-inner">
     <a href="index.html" class="brand" aria-label="EntitleX home">
-      <img src="images/entitlex-logo.png" class="logo-dark" alt="EntitleX Technologies">
-      <img src="images/entitlex-logo-light.png" class="logo-light" alt="" aria-hidden="true">
+      <img src="images/entitlex-logo.png" class="brand-logo logo-dark" alt="EntitleX">
+      <img src="images/entitlex-logo-light.png" class="brand-logo logo-light" alt="" aria-hidden="true">
     </a>
-    <nav class="main-nav" aria-label="Primary navigation">
+    <nav class="main-nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <div class="nav-item">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Solutions
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="nav-menu" role="menu">
+          <a href="services.html#resale" role="menuitem"><span class="mi">01</span><span><strong>Software &amp; cloud resale</strong><small>Microsoft 365, Azure, AWS, Google, Adobe and 200+ vendors</small></span></a>
+          <a href="services.html#web" role="menuitem"><span class="mi">02</span><span><strong>Web &amp; product development</strong><small>Marketing sites, portals and customer platforms</small></span></a>
+          <a href="services.html#dashboards" role="menuitem"><span class="mi">03</span><span><strong>Dashboards &amp; reporting</strong><small>Licence, spend and operations visibility in one place</small></span></a>
+          <a href="services.html#ai" role="menuitem"><span class="mi">04</span><span><strong>AI automation</strong><small>Workflows that remove manual work from IT and finance</small></span></a>
+        </div>
+      </div>
+      <a href="pricing.html">Pricing</a>
       <a href="process.html">How we work</a>
       <a href="about.html">About</a>
-      <button class="theme-toggle desktop-theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch colour theme">☀️ Light</button>
-      <a href="contact.html" class="nav-cta">Talk to us</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme"></button>
+      <a href="contact.html" class="nav-cta magnetic">Get a quote</a>
     </nav>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="process.html">How we work</a>
-    <a href="about.html">About</a>
-    <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">☀️ Light</button>
-    <a href="contact.html" class="mobile-menu-cta">Talk to us</a>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a class="mm-link" href="index.html">Home</a>
+    <div class="mm-group">Solutions</div>
+    <a class="mm-link" href="services.html#resale">Software &amp; cloud resale</a>
+    <a class="mm-link" href="services.html#web">Web &amp; product development</a>
+    <a class="mm-link" href="services.html#dashboards">Dashboards &amp; reporting</a>
+    <a class="mm-link" href="services.html#ai">AI automation</a>
+    <div class="mm-group">Company</div>
+    <a class="mm-link" href="pricing.html">Pricing</a>
+    <a class="mm-link" href="process.html">How we work</a>
+    <a class="mm-link" href="about.html">About</a>
+    <a href="contact.html" class="btn btn-primary">Get a quote</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" style="margin:14px 4px 0"></button>
   </nav>
 </header>
-<main><section class="page"><div class="wrap"><div class="page-hero"><span class="section-label">OUR SERVICES</span><h1>Software and technology management with greater structure.</h1><p class="page-intro">EntitleX supports organizations across software licensing, IT asset management, SaaS subscriptions, compliance and technology integration.</p></div>
-<div class="service-list">
-<article class="service-detail"><span class="service-detail-number">01</span><div><h2>Software Licensing &amp; Procurement</h2><p>Evaluate licensing requirements, compare appropriate options and support procurement decisions aligned with business needs.</p><ul><li>License requirements assessment</li><li>Licensing model evaluation</li><li>Vendor comparison</li><li>Procurement support</li><li>Renewal planning</li></ul></div></article>
-<article class="service-detail"><span class="service-detail-number">02</span><div><h2>Software Asset Management</h2><p>Establish better visibility across software assets, deployments, users and license utilization.</p><ul><li>Software inventory</li><li>Deployment visibility</li><li>License allocation</li><li>Usage analysis</li><li>Optimization opportunities</li></ul></div></article>
-<article class="service-detail"><span class="service-detail-number">03</span><div><h2>License Compliance &amp; Audit Readiness</h2><p>Support a clearer understanding of your licensing position and the relationship between entitlements, deployments and requirements.</p><ul><li>Entitlement tracking</li><li>Deployment mapping</li><li>License reconciliation</li><li>Gap identification</li><li>Audit preparation</li></ul></div></article>
-<article class="service-detail"><span class="service-detail-number">04</span><div><h2>SaaS &amp; Subscription Management</h2><p>Bring SaaS applications, subscriptions, users and renewal cycles into a structured management process.</p><ul><li>Subscription inventory</li><li>Seat management</li><li>Usage reviews</li><li>Renewal tracking</li><li>Subscription optimization</li></ul></div></article>
-<article class="service-detail"><span class="service-detail-number">05</span><div><h2>Vendor &amp; Contract Management</h2><p>Improve visibility across software vendors, agreements, commercial terms and renewal commitments.</p><ul><li>Vendor coordination</li><li>Contract tracking</li><li>Renewal management</li><li>Vendor communication</li><li>Commercial visibility</li></ul></div></article>
-<article class="service-detail"><span class="service-detail-number">06</span><div><h2>IT Systems Integration</h2><p>Connect applications, infrastructure and technology platforms around practical business and operational requirements.</p><ul><li>Application integration</li><li>Infrastructure coordination</li><li>Data and workflow connectivity</li><li>Technology deployment support</li><li>Third-party system coordination</li></ul></div></article>
-</div><div class="page-cta"><h2>Not sure where to start?</h2><p>Tell us about your current environment and the requirement you're trying to solve.</p><a href="contact.html" class="btn-primary">Talk to EntitleX</a></div></div></section></main>
-<footer class="site-footer"><div class="wrap footer-grid"><div class="footer-main"><a href="index.html" class="footer-brand"><img src="images/entitlex-logo.png" class="logo-dark" alt="EntitleX Technologies"><img src="images/entitlex-logo-light.png" class="logo-light" alt="" aria-hidden="true"></a><p>Software licensing, IT asset management and technology integration for growing businesses.</p></div><div class="footer-column"><h3>Services</h3><a href="services.html">Software Licensing</a><a href="services.html">Asset Management</a><a href="services.html">Compliance</a><a href="services.html">SaaS Management</a><a href="services.html">System Integration</a></div><div class="footer-column"><h3>Company</h3><a href="about.html">About</a><a href="process.html">How we work</a><a href="contact.html">Contact</a></div><div class="footer-column"><h3>Contact</h3><a href="mailto:info@entitlex.in">info@entitlex.in</a><a href="contact.html">Talk to us →</a></div></div><div class="wrap footer-bottom"><span>© 2026 EntitleX Technologies. All rights reserved.</span><span>Software licensing &amp; system integration</span></div></footer>  <script src="menu.js" defer></script>
-</body></html>
+
+<main>
+<section class="page-hero">
+  <div class="shell">
+    <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+    <span class="eyebrow" data-reveal><span class="dot"></span>Six services · one accountable owner</span>
+    <h1 data-reveal style="--d:60ms">Everything between the invoice and the outcome.</h1>
+    <p class="lede" data-reveal style="--d:120ms">Most suppliers stop at the licence. We stay for the tenant, the renewals, the site, the dashboard and the automations that make the whole stack worth paying for — priced in INR, supported in IST.</p>
+    <div class="hero-actions" data-reveal style="--d:180ms">
+      <a href="contact.html" class="btn btn-primary">Get a scoped quote</a>
+      <a href="pricing.html" class="btn btn-ghost">See management plans</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:64px">
+  <div class="shell">
+
+    <article class="svc" id="resale" data-reveal>
+      <span class="svc-num">01</span>
+      <div>
+        <h2>Software &amp; cloud resale</h2>
+        <p>Microsoft 365, Azure, AWS, Google Workspace, Adobe, Atlassian, security tooling and the long tail of SaaS — quoted, provisioned and renewed through one commercial desk, billed in INR with 18% GST for input credit. Your licences sit in your own tenant and account, so you keep control even if you change supplier.</p>
+        <div class="svc-tags"><span>Microsoft CSP India</span><span>Azure</span><span>AWS</span><span>Google Workspace</span><span>Adobe</span><span>Atlassian</span><span>Security &amp; backup</span><span>INR &amp; GST billing</span><span>Long-tail SaaS</span></div>
+      </div>
+      <aside class="svc-aside"><span>What it removes</span><strong>Twelve invoices, four spreadsheets and the annual guessing game about what owns which renewal.</strong><a href="contact.html">Request a quote →</a></aside>
+    </article>
+
+    <article class="svc" id="optimisation" data-reveal>
+      <span class="svc-num">02</span>
+      <div>
+        <h2>Licence optimisation &amp; FinOps</h2>
+        <p>We reconcile entitlements against actual deployment and usage, then build a prioritised plan: seats to reclaim, tiers to right-size, commitments to renegotiate, cloud resources to schedule down. Every recommendation carries an estimated saving in rupees and a named owner.</p>
+        <div class="svc-tags"><span>Entitlement reconciliation</span><span>Seat utilisation</span><span>Cloud cost review</span><span>Reserved coverage</span><span>Renewal planning</span><span>Audit readiness</span></div>
+      </div>
+      <aside class="svc-aside"><span>Typical outcome</span><strong>12–30% of annual software spend identified as recoverable within the first review cycle.</strong><a href="index.html#savings">Estimate your saving →</a></aside>
+    </article>
+
+    <article class="svc" id="m365" data-reveal>
+      <span class="svc-num">03</span>
+      <div>
+        <h2>Microsoft 365 &amp; security operations</h2>
+        <p>Tenant configuration, identity hardening, email security, device compliance, backup and day-to-day administration. Handled by India-based engineers who understand both the licensing consequences of every setting and your DPDP Act obligations.</p>
+        <div class="svc-tags"><span>Conditional access</span><span>MFA rollout</span><span>Intune device policy</span><span>Exchange Online protection</span><span>Backup &amp; recovery</span><span>Tenant migrations</span></div>
+      </div>
+      <aside class="svc-aside"><span>Included in</span><strong>Growth and Enterprise plans, with a named engineer and documented change log.</strong><a href="pricing.html">Compare plans →</a></aside>
+    </article>
+
+    <article class="svc" id="web" data-reveal>
+      <span class="svc-num">04</span>
+      <div>
+        <h2>Web &amp; product development</h2>
+        <p>Premium marketing sites, customer portals, booking flows and internal tools. Designed around a positioning narrative and built against a performance budget — then hosted and maintained by the same team, on India or global infrastructure, with an uptime commitment.</p>
+        <div class="svc-tags"><span>Positioning &amp; UX</span><span>Next.js / React</span><span>Headless CMS</span><span>E-commerce</span><span>Customer portals</span><span>Performance &amp; SEO</span></div>
+      </div>
+      <aside class="svc-aside"><span>Recent shape of work</span><strong>Marketing site rebuild plus a gated portal and CRM hand-off in one six-week engagement.</strong><a href="contact.html">Discuss a build →</a></aside>
+    </article>
+
+    <article class="svc" id="dashboards" data-reveal>
+      <span class="svc-num">05</span>
+      <div>
+        <h2>Dashboards &amp; systems integration</h2>
+        <p>Connect finance, identity and operational systems so the numbers reconcile in one place — including GST-coded spend and departmental budgets. We build for the person who has to make the decision: role-based views, scheduled delivery and a documented data model rather than a wall of charts.</p>
+        <div class="svc-tags"><span>Power BI</span><span>Looker Studio</span><span>Microsoft Graph</span><span>AWS Cost Explorer</span><span>APIs &amp; webhooks</span><span>Data modelling</span></div>
+      </div>
+      <aside class="svc-aside"><span>Included in</span><strong>Growth plan (licence dashboard) and as a scoped build for finance and operations reporting.</strong><a href="pricing.html">See what's included →</a></aside>
+    </article>
+
+    <article class="svc" id="ai" data-reveal>
+      <span class="svc-num">06</span>
+      <div>
+        <h2>AI automation &amp; private assistants</h2>
+        <p>We automate the repetitive workflows that drain IT and finance: joiner/mover/leaver provisioning, GST invoice triage, renewal notices, quote drafting and support triage. Every automation ships with a data-flow map, an audit trail and human approval where money or access moves — aligned to DPDP Act 2023 requirements.</p>
+        <div class="svc-tags"><span>Document assistants</span><span>Workflow automation</span><span>Teams &amp; Slack bots</span><span>Power Automate</span><span>n8n</span><span>India data region</span><span>Human-in-the-loop</span></div>
+      </div>
+      <aside class="svc-aside"><span>Guardrails</span><strong>Enterprise API terms, no training on your content, least-privilege access and documented boundaries.</strong><a href="contact.html">Scope an automation →</a></aside>
+    </article>
+
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Delivery commitments</span>
+      <h2>What you can hold us to.</h2>
+    </div>
+    <div class="grid g3">
+      <article class="card" data-reveal><span class="card-num">QUOTES</span><h3>24-hour turnaround</h3><p>Submit requirements on an Indian working day and receive an INR line-item quote the next working day — including margin, GST and term.</p></article>
+      <article class="card" data-reveal style="--d:80ms"><span class="card-num">SUPPORT</span><h3>15-minute critical response</h3><p>Security or access incidents are acknowledged within 15 minutes during IST business hours, with a named owner immediately.</p></article>
+      <article class="card" data-reveal style="--d:160ms"><span class="card-num">COMPLIANCE</span><h3>GST, DPDP and audit-ready</h3><p>INR invoices with GST, signed DPAs, documented data flows and India-region hosting where residency is required.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap" style="padding-top:84px">
+  <div class="shell">
+    <div class="cta-box" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Scoping</span>
+      <h2>Tell us the outcome. We'll propose the smallest path there.</h2>
+      <p>Most engagements start with one invoice or one broken workflow. Bring that, and we'll show you what a fix looks like.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary magnetic">Start a conversation</a>
+        <a href="pricing.html" class="btn btn-ghost">View plans</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/entitlex-logo.png" class="logo-dark" alt="EntitleX">
+        <img src="images/entitlex-logo-light.png" class="logo-light" alt="" aria-hidden="true">
+        <p>The software, cloud and AI partner for Indian businesses that would rather buy outcomes than manage vendors. INR billing · GST invoicing · IST support.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-4V9Z"/></svg></a>
+          <a href="mailto:hello@entitlex.in" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="services.html#resale">Software &amp; cloud resale</a>
+        <a href="services.html#m365">Microsoft 365 &amp; security</a>
+        <a href="services.html#optimisation">Licence optimisation</a>
+        <a href="services.html#web">Web &amp; product</a>
+        <a href="services.html#dashboards">Dashboards</a>
+        <a href="services.html#ai">AI automation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About EntitleX</a>
+        <a href="process.html">How we work</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@entitlex.in">hello@entitlex.in</a>
+        <a href="mailto:info@entitlex.in">info@entitlex.in</a>
+        <a href="contact.html">Request a quote</a>
+        <a href="contact.html">Book a review</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> EntitleX Technologies. All rights reserved.</span>
+      <div><a href="about.html">Privacy</a><a href="about.html">Terms</a><a href="process.html">Service commitments</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" type="button" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script src="app.js" defer></script>
+</body>
+</html>
