@@ -136,10 +136,10 @@ html[data-theme="light"] .brand .logo-light{display:block!important}
   color:var(--muted);font-size:14px;font-weight:600;white-space:nowrap;
   transition:color .2s,background .2s;
 }
-.main-nav>a:hover,.nav-trigger:hover,.main-nav>a[aria-current="page"]{color:var(--text);background:rgba(255,255,255,.05)}
-html[data-theme="light"] .main-nav>a:hover,
+.main-nav>a:not(.nav-cta):hover,.nav-trigger:hover,.main-nav>a:not(.nav-cta)[aria-current="page"]{color:var(--text);background:rgba(255,255,255,.05)}
+html[data-theme="light"] .main-nav>a:not(.nav-cta):hover,
 html[data-theme="light"] .nav-trigger:hover,
-html[data-theme="light"] .main-nav>a[aria-current="page"]{background:rgba(16,38,64,.05)}
+html[data-theme="light"] .main-nav>a:not(.nav-cta)[aria-current="page"]{background:rgba(16,38,64,.05)}
 .nav-trigger svg{transition:transform .25s var(--ease);opacity:.7}
 .nav-item{position:relative}
 .nav-item.is-open .nav-trigger svg{transform:rotate(180deg)}
