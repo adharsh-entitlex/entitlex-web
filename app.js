@@ -323,11 +323,11 @@
         if (data.get(k)) lines.push(k.toUpperCase() + ": " + data.get(k));
       });
       var subject = "New enquiry — " + (data.get("service") || "EntitleX");
-      var mailto = "mailto:hello@entitlex.in?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n\n"));
+      var mailto = "mailto:info@entitlex.in?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n\n"));
 
       if (success) {
         success.classList.add("show");
-        success.innerHTML = "<strong>Thanks, " + String(data.get("name") || "").split(" ")[0] + ".</strong><br>Your email app is opening with the details pre-filled. Prefer to write directly? <a href=\"" + mailto + "\" style=\"color:inherit;text-decoration:underline\">Open the message</a> or email hello@entitlex.in.";
+        success.innerHTML = "<strong>Thanks, " + String(data.get("name") || "").split(" ")[0] + ".</strong><br>Your email app is opening with the details pre-filled. Prefer to write directly? <a href=\"" + mailto + "\" style=\"color:inherit;text-decoration:underline\">Open the message</a> or email info@entitlex.in.";
       }
       window.location.href = mailto;
     });
